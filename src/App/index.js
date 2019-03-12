@@ -12,18 +12,21 @@ class App extends Component {
     }
   }
 
+  //takes input from Input component
   AddItem = (newItem)=>{
     const copiedItems = this.state.todos.slice();
     copiedItems.push({title: newItem, completed: false});
     this.setState({todos: copiedItems})
   }
 
+  //for TodoList/TodoItems
   deleteATodo = index => {
     this.setState(state => ({
       todos: [...state.todos.slice(0, index), ...state.todos.slice(index + 1)]
     }));
   };
 
+  //for TodoList/TodoItems
   completeATodo = index => {
     const toChange = this.state.todos[index];
     this.setState(state => ({
