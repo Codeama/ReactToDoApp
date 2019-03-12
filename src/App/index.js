@@ -16,9 +16,6 @@ class App extends Component {
     const copiedItems = this.state.todos.slice();
     copiedItems.push({title: newItem, completed: false});
     this.setState({todos: copiedItems})
-    // this.state.todos.forEach((item)=>{
-    //   console.log(`${item.title} ${item.completed}`)
-    // })
   }
 
   deleteATodo = index => {

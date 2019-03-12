@@ -8,7 +8,8 @@ const TodoList = props => (
                 <TodoItem key= {idx}
                 title={item.title}
                 status={item.complete}
-               
+                onComplete = {()=> props.onComplete(idx)}
+                onDelete = {() => props.onDelete(idx)}
                />
             ))}</ul>
         </div>

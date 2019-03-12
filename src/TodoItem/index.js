@@ -5,9 +5,9 @@ const TodoItem = props => (
     <div>
         
         <li className={style.ul}
-        ><button >Complete</button>
+        ><button onClick = {props.onComplete}>✓</button>
          {props.title} - {props.status ? "Complete" : "Active"}
-         <button >X</button></li>
+         <button onClick = {props.onDelete}>X</button></li>
         
     </div>
 )
